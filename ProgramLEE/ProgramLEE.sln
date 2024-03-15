@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class1th(TimeComplexity)", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class2th(SingleLinkedList)", "..\Class2th(SingleLinkedList)\Class2th(SingleLinkedList).vcxproj", "{892134FE-6C18-4118-A0A9-81327AF38065}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class3th(DoubleLinkedList)", "..\Class3th(DoubleLinkedList)\Class3th(DoubleLinkedList).vcxproj", "{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{892134FE-6C18-4118-A0A9-81327AF38065}.Release|x64.Build.0 = Release|x64
 		{892134FE-6C18-4118-A0A9-81327AF38065}.Release|x86.ActiveCfg = Release|Win32
 		{892134FE-6C18-4118-A0A9-81327AF38065}.Release|x86.Build.0 = Release|Win32
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Debug|x64.ActiveCfg = Debug|x64
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Debug|x64.Build.0 = Debug|x64
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Debug|x86.ActiveCfg = Debug|Win32
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Debug|x86.Build.0 = Debug|Win32
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Release|x64.ActiveCfg = Release|x64
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Release|x64.Build.0 = Release|x64
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Release|x86.ActiveCfg = Release|Win32
+		{D6C80CBD-44C4-44F1-9C1C-9DFB89154190}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
