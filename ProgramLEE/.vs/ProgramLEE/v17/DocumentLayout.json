@@ -7,13 +7,7 @@
       "RelativeMoniker": "D:0:0:{085779D4-C12B-4E62-88CD-CB07EE6411F2}|ProgramLEE.vcxproj|solutionrelative:ProgramLEE.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CD1A135-40EC-4B9C-88B3-9C6B7B752FB8}|..\\class6th(CircleQueue)\\class6th(CircleQueue).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B23C5EB4-6ED4-475E-A8B5-BD063E99A147}|..\\class5th(LinearQueue)\\class5th(LinearQueue).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class5th(LinearQueue)\\Source5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1F8BF9E-8077-4B96-8803-1C9EA715D4A7}|..\\Class1th(TimeComplexity)\\Class1th(TimeComplexity).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class1th(TimeComplexity)\\Source1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DE974442-BE3D-4260-98FC-F91D103933F2}|..\\Class7th(Operator overoding)\\Class7th(Operator overoding).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,27 +38,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Source6.cpp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp",
-              "RelativeDocumentMoniker": "..\\class6th(CircleQueue)\\Source6.cpp",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp",
-              "RelativeToolTip": "..\\class6th(CircleQueue)\\Source6.cpp",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAkwLMAAAAAAAAA",
+              "Title": "Source7.cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp",
+              "RelativeDocumentMoniker": "..\\Class7th(Operator overoding)\\Source7.cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp",
+              "RelativeToolTip": "..\\Class7th(Operator overoding)\\Source7.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T12:05:58.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Source5.cpp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class5th(LinearQueue)\\Source5.cpp",
-              "RelativeDocumentMoniker": "..\\class5th(LinearQueue)\\Source5.cpp",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class5th(LinearQueue)\\Source5.cpp",
-              "RelativeToolTip": "..\\class5th(LinearQueue)\\Source5.cpp",
-              "ViewState": "AQIAADQAAAAAAAAAAAAAADcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T12:37:52.959Z",
+              "WhenOpened": "2024-03-21T11:30:54.706Z",
               "EditorCaption": ""
             },
             {
@@ -75,22 +56,9 @@
               "RelativeDocumentMoniker": "ProgramLEE.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\ProgramLEE\\ProgramLEE.cpp",
               "RelativeToolTip": "ProgramLEE.cpp",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADYAAAAtAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-12T11:08:00.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Source1.cpp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class1th(TimeComplexity)\\Source1.cpp",
-              "RelativeDocumentMoniker": "..\\Class1th(TimeComplexity)\\Source1.cpp",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class1th(TimeComplexity)\\Source1.cpp",
-              "RelativeToolTip": "..\\Class1th(TimeComplexity)\\Source1.cpp",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAABAAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-13T12:08:37.579Z",
               "EditorCaption": ""
             }
           ]
