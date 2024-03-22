@@ -7,7 +7,10 @@
       "RelativeMoniker": "D:0:0:{085779D4-C12B-4E62-88CD-CB07EE6411F2}|ProgramLEE.vcxproj|solutionrelative:ProgramLEE.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE974442-BE3D-4260-98FC-F91D103933F2}|..\\Class7th(Operator overoding)\\Class7th(Operator overoding).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D6EF9636-BBD3-4BA1-A58D-1F9C53DF8760}|..\\Class7th(Vector)\\Class7th(Vector).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Vector)\\Source 8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CD1A135-40EC-4B9C-88B3-9C6B7B752FB8}|..\\class6th(CircleQueue)\\class6th(CircleQueue).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +20,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,15 +40,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Source7.cpp",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp",
-              "RelativeDocumentMoniker": "..\\Class7th(Operator overoding)\\Source7.cpp",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Operator overoding)\\Source7.cpp",
-              "RelativeToolTip": "..\\Class7th(Operator overoding)\\Source7.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Source6.cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp",
+              "RelativeDocumentMoniker": "..\\class6th(CircleQueue)\\Source6.cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\class6th(CircleQueue)\\Source6.cpp",
+              "RelativeToolTip": "..\\class6th(CircleQueue)\\Source6.cpp",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-21T11:30:54.706Z",
+              "WhenOpened": "2024-03-22T11:10:41.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Source 8.cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Vector)\\Source 8.cpp",
+              "RelativeDocumentMoniker": "..\\Class7th(Vector)\\Source 8.cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\Class7th(Vector)\\Source 8.cpp",
+              "RelativeToolTip": "..\\Class7th(Vector)\\Source 8.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAL0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-22T11:04:27.334Z",
               "EditorCaption": ""
             },
             {
@@ -56,7 +72,7 @@
               "RelativeDocumentMoniker": "ProgramLEE.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC774\uC7AC\uD604 \uC790\uB8CC\uAD6C\uC870\\-\\ProgramLEE\\ProgramLEE.cpp",
               "RelativeToolTip": "ProgramLEE.cpp",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJYAAAAAAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-12T11:08:00.681Z",
               "EditorCaption": ""

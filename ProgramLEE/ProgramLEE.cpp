@@ -1,157 +1,146 @@
 ﻿#include<iostream>
 
 using namespace std;
-template <typename T>
 
-class Vector
+template <typename T>
+#define SIZE 10
+class Stack
 {
 private:
-	int size;
-	int capacity;
-	T* bufferPointer;
+	int top;
+	 T buffer[SIZE];
 
 public:
-	Vector()
+	Stack()
 	{
-		capacity = 0;
-		size = 0;
-		bufferPointer = nullptr;
+		for (int i = 0; i < SIZE; i++)
+		{
+			buffer[i] = NULL;
+		}
+		top = -1;
 	}
-	~Vector()
+	~Stack()
 	{
-		if (bufferPointer != nullptr)
+		if (buffer[top] == NULL)
 		{
-			delete[]bufferPointer;
+			Pop();
 		}
-		
 	}
-	void PushBack(T data)
-	{	
-		if (capacity == 0)
+	void Push(T data)
+	{
+		if (IsFull())
 		{
-			Resize(1);
-		}
-		else if (capacity <= size)
-		{
-		
-			Resize(capacity*2); 
-			bufferPointer[size++] = data;
-
+			cout << "Stack is Full"<<endl;
 		}
 		else
 		{
-			bufferPointer[size++] = data;
+			
+			buffer[++top] = data;
 		}
-	
-		
-
 	}
-	void PopBack()
-	{	
-		if (size <= 0)
+	T Pop()
+	{
+		if (Empty())
 		{
-			cout << "Size is empty" << endl;
+			cout << "Stack is Empty"<<endl;
 		}
 		else
 		{
-			bufferPointer[--size] = NULL;
-		}
-		
-		
-	
-	}
-	void Resize(int newSize) 
-	{	
-		
-		if (capacity <= newSize)
-		{	
-			// capacity =newSize;
-			capacity = newSize;
-			//2.새로운 포인터 변수를 생성하여 새롭게 만들어진 메모리 공간을 가리키게 함 .
-			T* newPointer = new T[capacity];  
-			
-			
-			//3. 새로운 메모리 공간에 값을 초기화 해줌 .
-			for (int i = 0; i < capacity; i++)
-			{
-				newPointer[i] =NULL; 
-			}
-			//4. 기존 배열에 있을 복사해서 새로운 배열에 넣어줌 
-			for (int i = 0; i < size; i++)
-			{
-				newPointer[i]=bufferPointer[i];
-			}
-			
-			if (bufferPointer != nullptr) 
-			{	//5. BufferPointer가 가리키는 메모리 주소 해제
-				delete [] bufferPointer;
-			}
-			//6. Bufferpointer 에 새로운 메모리 주소를 넣어줌.
-			bufferPointer = newPointer; 
+			return buffer[top--];
 			
 		}
-		
-		
+
 	}
-	void Reserve(int newSize)
-	{	
-		if (capacity > newSize)
+
+	bool Empty()
+	{
+		if (top <= -1)
 		{
-			return;
+			return true;
 		}
 		else
 		{
-			capacity = newSize;
-			Resize(capacity);
-
+			return false;
 		}
 	}
-	T& operator [](const int& index)
+	bool IsFull()
 	{
-		return bufferPointer[index];
+		if (top >= SIZE-1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	int& Size()
+	T& Top()
 	{
-		return size;
+		return buffer[top]; 
 	}
-	
+
 };
+
+bool CheckBracket(string content)
+{
+	// ) } ] ( a [i+1] =0;}
+	Stack <char> stack;
+
+	for (int i = 0; i < content.length(); i++)
+	{
+		if (content[i] == '(' || content[i] == '{' || content[i] == '[')
+		{
+			stack.Push(content[i]);
+		}
+		if (content[i] == ')' || content[i] == '}' || content[i] == ']')
+		{
+			
+			if(stack.Top()==content[i])
+			{
+				stack.Pop();
+
+			}
+			else
+			{
+				return false;
+			}
+			
+			
+		}
+		
+	}
+
+if (stack.Empty())
+{
+	return true;
+}
+else
+{
+	return false;
+}
+	
+	
+}
 
 		
 int main()
 {
-	Vector <int> vector1;
-	vector1.Reserve(5);
-	vector1.PushBack(10);
-	vector1.PushBack(20);
-	vector1.PushBack(30);
-	vector1.PushBack(40);
-	vector1.PushBack(50);
-	vector1.PushBack(60);
-	vector1.PushBack(70);
-	vector1.PushBack(80);
-
 	
-
-
-
-	for (int i = 0; i < vector1.Size(); i++)
-	{
-		cout << vector1[i]<<" ";
-	}
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-	vector1.PopBack();
-
-
-
 	
+	//Stack <int> stack;
 
+	//for (int i = 1; i <= SIZE; i++)
+	//{
+	//	stack.Push(i * 10);
+	//}
+
+	//while (stack.Empty() != true)
+	//{
+	//	cout << "|" << stack.Top() << "|" << endl;
+	//	stack.Pop();
+	//}
+	string flag = "()";
+	cout << CheckBracket(flag);
 	return 0;
 }
 	
