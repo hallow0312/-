@@ -95,7 +95,17 @@ bool CheckBracket(string content)
 		if (content[i] == ')' || content[i] == '}' || content[i] == ']')
 		{
 			
-			if(stack.Top()==content[i])
+			if(stack.Top()=='('&&content[i]==')')
+			{
+				stack.Pop();
+
+			}
+			else if (stack.Top() == '{' && content[i] == '}')
+			{
+				stack.Pop();
+
+			}
+			else if (stack.Top() == '[' && content[i] == ']')
 			{
 				stack.Pop();
 
@@ -104,6 +114,8 @@ bool CheckBracket(string content)
 			{
 				return false;
 			}
+
+
 			
 			
 		}
@@ -139,7 +151,7 @@ int main()
 	//	cout << "|" << stack.Top() << "|" << endl;
 	//	stack.Pop();
 	//}
-	string flag = "()";
+	string flag = "[{()}]";
 	cout << CheckBracket(flag);
 	return 0;
 }
