@@ -1,150 +1,103 @@
-﻿#include <iostream>
-using namespace std;
+﻿#include<iostream>
 
-#define Max_Size 8
-template <typename T>
-class Heap
+using namespace std;
+#define SIZE 6
+template<typename KEY,typename Value>
+class HashTable
 {
 private:
-	int index;
-	T buffer[Max_Size];  
+	struct Node
+	{
+		KEY key;
+		Value value;
+		Node* next;
+		
+	};
+	struct Bucket
+	{
+		int count;
+		//버킷 구조체 배열 생성 
+		Bucket* head;
+
+	};
 	
+Bucket bucket[SIZE];   
 
-public: 
-	Heap()
+public:
+
+	HashTable()
 	{
-		index = 0; 
-		
-		for (int i = 0; i < Max_Size; i++)
+		for (int i = 0; i < SIZE; i++)
 		{
-			buffer[i] = NULL; 
+			bucket[i].count = 0; 
+			bucket[i].head = nullptr; 
 		}
+
 	}
-	void Insert(int data)
+
+	template<typename T>
+
+	int HashFunction(T key)
 	{
-		if (index >= Max_Size-1)
-		{	
-			cout << "Heap is Full" << endl;
-			return;
-		}
-		buffer[++index] = data;
-		
+		int HashIndex = (int)key % SIZE; 
 
-		int child = index;
-		int parent = index / 2;
-		while (child> 1 && buffer[child] > buffer[parent])
-		{
-			/*
-			자식 노드와 부모 노드의 데이터를 비교 (&& 연산자를 안쓸거면)
-			if(buffer[parent]<buffer[child])
-			{
-				swap(buffer[parent,buffer[child])
-			}
-
-			*/
-			swap(buffer[child], buffer[parent]);
-
-			child = child / 2;
-
-			parent = child / 2;
-		}
-		
-	}
-	T &Delete()
-	{	
-		//1. Heap 이 비어 있더만 프로그램 종료 
-		if (index<=0)
-		{	
-			cout << "Heap is empty" << endl;
-			exit(1);
-		}
-		
-		// 임시 변수에 buffer[1] 보관
-		T result = buffer[1];  
-		
-		buffer[1] = buffer[index];
-
-		buffer[index--] = NULL;
-		
-		int parent = 1;
-		int child = parent * 2;
-			
-		while (parent>=index)
-		{	
-			if (buffer[child + 1] > buffer[child])
-			{
-				++child;
-			}
-			
-			
-			if (buffer[parent] < buffer[child])
-			{
-				swap(buffer[parent], buffer[child]);
-			}
-			else
-			{
-				break;
-			}
-			parent = child;
-			child = parent * 2;
-		
-			
-		}
-		return result; 
-			
-
-		//2.index 로 가리키는 배열의 값을 첫번 째로 원소에 넣어줌
-		//index로 가리키는 배열의 값 초기화
-		// index  감소 
-	}
-		
-
-	void Show()
-	{
-		for (T element : buffer)
-		{
-			cout << element << " ";
-		}
-		
-
-
+		return HashIndex; 
 
 	}
-
-		
 	
-		
+	int HashFunction(string key) 
+	{
+		int HashIndex = 0;
+
+		for (int i = 0; i < key.length(); i++)
+		{
+			HashIndex += (int)key[i];
+		}
+
+		HashIndex = (int)HashIndex % SIZE;
+		return HashIndex;
+
+	}
+
+
 
 };
 
+
 int main()
 {
-	
-#pragma region heap
-	//가장 큰값이 꼭대기에 
-	// 부모노드의 key 값이 자식노드의 key값보다 커야함
-	// 완전 이진 트리 
-	// 데이터 삽입이나 삭제가능 하나 완전이진트리가 유지가 되어야함 .
-	// 데이터를 뽑을 때 상수값이 들기에 시간 효율 좋음 
 
-	//왼쪽 자식의 인덱스 = 부모노드의 인덱스 *2;
-	//오른쪽 자식의 인덱스 = 부모노드의 인덱스 *2+1;
-	//부모의 인덱스 = 자식의 인덱스 /2;
-	Heap <int> heap;
-	heap.Insert(10);
-	heap.Insert(20);
-	heap.Insert(30);
-	heap.Insert(40);
-	heap.Insert(50);
-	heap.Insert(60);
-	heap.Insert(70);
-	heap.Show();
-	heap.Delete();
-	cout << endl;
-	heap.Show();
+#pragma region 해시 테이블 
+	// (key , Value) 로 데이터를 저장하는 자료 구조 중 하나로 
+	// 빠르게 데이터를 검색 할 수 있는 자료구조 ;
+
+	// 해시 충돌을 해결 하는 방법
+	// 
+	// <체이닝 기법>
+	// 각 해시 버킷을 연결리스트로 구성하는 방식
+	
+	// 해시 충돌 발생 시 동일한 해시 값에 해당하는 데이터들을 
+	// 연결리스트로 연결하여 저장 .
+
+	// <개방 주소법>
+	// 충돌 발생 시 빈 버켓에 데이터를 저장하는 방식.
+
+	// 빈 버킷을 어떻게 결정할 지에 따라 구현 방식이 달라짐.
+
+	// 선형 탐사 : 충돌 발생 시 앞에서 부터 차례대로 빈 버킷을
+	// 찾아 저장하는 방식 .
+	
+	// 이차 탐사 : 충돌 발생시 2^, 2^3 만큼 떨어진 빈 버킷을 찾아 
+	// 값을 저장하는 방식 .
+
+	// 이중 해싱 : 해시 값을 한번 더 해시 함수에서 다른함수를 
+	// 도출하는 방식임.
+
+
+
 
 #pragma endregion
 
 
-	return 0;
+	return 0; 
 }
