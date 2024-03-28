@@ -1,23 +1,25 @@
 ﻿#include<iostream>
 
+
 using namespace std;
 #define SIZE 6
-template<typename KEY,typename Value>
+template<typename KEY,typename VALUE>
 class HashTable
 {
 private:
 	struct Node
 	{
 		KEY key;
-		Value value;
+		VALUE value;
 		Node* next;
 		
 	};
+
 	struct Bucket
-	{
+	{ 
 		int count;
 		//버킷 구조체 배열 생성 
-		Bucket* head;
+		Node* head;
 
 	};
 	
@@ -36,7 +38,6 @@ public:
 	}
 
 	template<typename T>
-
 	int HashFunction(T key)
 	{
 		int HashIndex = (int)key % SIZE; 
@@ -45,22 +46,107 @@ public:
 
 	}
 	
-	int HashFunction(string key) 
+	template<>
+	int HashFunction(string key)  //bucket 의 index를 결정하는 함수 ;
 	{
-		int HashIndex = 0;
+		int result = 0;
 
-		for (int i = 0; i < key.length(); i++)
+		for (const char &element :key)
 		{
-			HashIndex += (int)key[i];
+			result += (int)element;
 		}
 
-		HashIndex = (int)HashIndex % SIZE;
+		int HashIndex = (int)result % SIZE;
 		return HashIndex;
 
 	}
 
+	Node* CreateNode(KEY key,VALUE value)     //노드를 반환해줄 함수 
+	{
+		Node* newNode = new Node;
+		newNode->key = key;
+		newNode->value = value;
+		newNode->next = nullptr;
 
+		return newNode; 
+	}
 
+	void Insert(KEY key, VALUE value) //bucket에 input 해줄 함수 
+		
+	{	//Hash 함수를 통해서 hash index 구하기 
+		int index = HashFunction(key);  
+
+		//2. 새로운 노드 
+		Node* newNode = CreateNode(key, value);
+
+		// 기존에 노드가 1개라도 존재하지 않으면;
+		if (bucket[index].count == 0)
+		{	
+			//bucket[index]의 head 포인터에 새로운 노드 저장 
+			bucket[index].head = newNode;
+			//4. bucket[Index]의 count 값 ++
+			bucket[index].count++;
+		}
+		else // 기존에 노드 1개 이상 존재한다면 
+		{
+			//1. newNode 의 next에 bucket[index]의 head 값(가장 최근의 노드 주소) 가리키게함.
+			newNode->next = bucket[index].head; 
+			//2. bucket[index].head에 새로 생성한 노드 주소 
+			bucket[index].head = newNode;
+			//3. bucket[index] 값 증가
+			bucket[index].count++;
+		}
+	}
+
+	void Show()
+	{	
+		
+		for (int i = 0; i < SIZE; i++) 
+		{	
+			Node* currentNode = bucket[i].head;  
+			while (currentNode != nullptr) 
+			{	
+				cout << "[" << currentNode->key <<"," << currentNode->value << "] "; 
+				currentNode = currentNode->next; 
+
+			}
+			cout << endl;
+		}
+	}
+
+	void Release(KEY key)
+	{
+		
+		int index = HashFunction(key);
+		
+		Node* traceNode= bucket[index].head;;
+		Node* currentNode=bucket[index].head;
+		
+		for (int i = 0; i < bucket[index].count; i++)
+		{
+			if (currentNode->key == key)
+			{
+				if (currentNode->next)
+				{
+					traceNode->next = currentNode->next;
+					delete(currentNode);
+					break;
+				}
+				else
+				{
+					traceNode->next = nullptr;
+					delete(currentNode);
+					break;
+				}
+			}
+			else
+			{
+				traceNode = currentNode;
+				currentNode = currentNode->next;
+			}
+		}
+
+	}
 };
 
 
@@ -93,8 +179,20 @@ int main()
 	// 이중 해싱 : 해시 값을 한번 더 해시 함수에서 다른함수를 
 	// 도출하는 방식임.
 
+	HashTable <int ,string> hashtable;
+	
+	hashtable.Insert(0, "soccer");
+	hashtable.Insert(1, "Basketball");
+	hashtable.Insert(2, "Tennis");
+	hashtable.Insert(3, "Swimming");
+	hashtable.Insert(4, "Baseball");
+	hashtable.Insert(5, "Skate");
+	hashtable.Insert(6, "Skeleton");
 
 
+	hashtable.Release(3);
+	hashtable.Show();
+	
 
 #pragma endregion
 
