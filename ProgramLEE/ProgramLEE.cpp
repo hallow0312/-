@@ -38,6 +38,28 @@ public:
 		}
 		
 	}
+	Trie *Find(const char* content)
+	{
+		if (*content == '\0')
+		{
+		
+			return this;
+
+		}
+		else
+		{
+			int index = *content - 'A';
+			if (alphabet[index] == nullptr)
+			{
+				return NULL;
+			}
+			else
+			{
+				alphabet[index]->Find(content + 1);
+			}
+		}
+		
+	}
 };
 			
 			
@@ -48,6 +70,7 @@ int main()
 	//문자열의 길이 M
 	// A~Z;
 	// 문자열 "Kone","Korea" "Sound","Kill" 
+	
 #pragma endregion
 
 			
