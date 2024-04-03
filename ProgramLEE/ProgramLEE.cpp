@@ -1,81 +1,163 @@
 ﻿#include<iostream>
 using namespace std;
-#define SIZE 10
 
 template <typename T>
-class AdjacencyList
+
+class BinarySearchTree
 {
 private:
 	struct Node
 	{
-		Node* next;
 		T data;
-		Node(T data, Node* link = NULL)
-		{
-			this->data = data;
-			next = link;
-		}
+		Node* left;
+		Node* right;
+		
 	};
-	int size; // 정점의 개수 
-	T vertex[SIZE]; // 정점의 집합
-	Node* graphList[SIZE]; //인접 리스트
-
+	Node* root;
 public:
-	AdjacencyList()
+	BinarySearchTree()
 	{
-		size = 0;
-		for (int i = 0; i < SIZE; i++)
-		{
-			vertex[i] = NULL;
-			graphList = NULL;
-		}
+		root = nullptr;
 	}
-	void Insert(T data)
+	Node* CreateNode(T key)
+	{
+		Node* newNode = new Node;
+		newNode->data = key;
+		newNode->left = nullptr;
+		newNode->right = nullptr;
+		return newNode;
+	}
+	void Insert(T key)
 	{	
-		if (size > SIZE)
-		{
-			cout << "Adjacency List if Full" << endl;
+		
+		if (root == nullptr)
+		{	
+			root = CreateNode(key); 
+			
 			return;
 		}
-		vertex[size++] = data;
+		else
+		{
+			Node* currentNode = root;
+
+			while (currentNode)
+			{
+				//내가 삽입하고자 하는 값이 current 값 보다 작은 경우 
+				if (currentNode->data > key)
+				{	
+					//left 에 값이 있다면
+					if (currentNode->left)
+					{
+						currentNode = currentNode->left;
+					}
+					else //없으면 추가 
+					{
+						currentNode->left = CreateNode(key);
+						break;
+					}
+				}
+				//내가 삽입하고자 하는 값이 current 값 보다 큰 경우 
+				else if (currentNode->data < key)
+				{
+					if (currentNode->right) //값이 있으면 
+					{
+						currentNode = currentNode->right;
+					}
+					else //없으면 추가 
+					{
+						currentNode->right = CreateNode(key);
+						break;
+					}
+				}
+				else //중복 불가 
+				{
+					cout << "중복 값은 허용 X" << endl;
+					return;
+				}
+			}
+
+		}
 	}
 	
+	void Find(T data)
+	{	
+		Node* currentNode = root;
 
-	void Insert(int u, int v)
+		while (currentNode)
+		{
+			if (data < currentNode->data)
+			{
+				
+				currentNode = currentNode->left;
+				
+			}
+			else if (data > currentNode->data)
+			{
+				
+				currentNode = currentNode->right;
+			}
+			else
+			{
+				cout << "Find data" << endl;
+				return;
+			}
+
+		}
+		if (currentNode == nullptr)
+		{
+			cout << "Can't Find" << endl;
+			break;
+		}
+	}
+	void Min()
 	{
-		if (size <= 0)
+		Node* currentNode = root;
+		while (currentNode)
 		{
-			cout << "Adjacency List is empty" << endl;
-			return;
+			if (currentNode->left)
+			{
+				curretNode = currentNode->left;
+			}
+			else
+			{
+				cout << currentNode->data << endl;
+			}
 		}
-		if (u > size || v > size)
-		{
-			cout << "Out of range" << endl;
-			return;
-		}
-		graphList[u] = new Node(data,graphlist[u]);
-		graphList[v] = new Node(data,graphList[v]);
 	}
-	
-
+	void Max()
+	{
+		Node* currentNode = root;
+	}
 };
-
 int main()
 {
+#pragma region 이진탐색트리 
+
+	// 한 노드에 대해 왼쪽 / 오른쪽의 (최대) 두개의 자식을 가질 수 있는 트리이며
+	// 왼쪽 자식은 부모 노드보다 작은 값을 , 오른쪽 자식은 부모 노드보다 큰 값을 
+	// 가지는 탐색 트리.
 	
-#pragma region 인접 리스트 (Adjacency List)
+	
 
-	// 그래프의 각 정점에 인접한 정점들을 연결 리스트 
-	// 로 표현하는 방법.
-
-	//장점 
-	// 그래프의 모든 간선의 수를 o(V+E) 로 표현 가능
-
-	//단점
-	// 두 정점을 연결하는 간선을 조회하거나 정점의 차수를 알기 
-	// 위해서 정점의 인접 리스트를 모두 탐색 해야 하므로 ,
-	// 정점의 차수만큼의 시간이 필요함.
+	
+	
 #pragma endregion
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
+
 
 
 	return 0;
