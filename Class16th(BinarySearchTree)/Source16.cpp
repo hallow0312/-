@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 
 template <typename T>
@@ -250,8 +250,8 @@ public:
 						Parent->right = child;
 						child->left = currentNode->left;
 						child->right = currentNode->right;
-
 						delete currentNode;
+						
 					}
 					else if (currentNode->data < Parent->data)
 					{
@@ -269,6 +269,7 @@ public:
 						root = child;
 					}
 
+					
 				}
 
 			}
@@ -294,6 +295,21 @@ public:
 		}
 
 	}
+	~BinarySearchTree()
+	{
+		Destroy(root);
+		
+	}
+	void Destroy(Node* root)
+	{
+		if (root != nullptr)
+		{
+			Destroy(root->left);
+			Destroy(root->right);
+			delete root;
+		}
+	}
+		
 };
 
 
