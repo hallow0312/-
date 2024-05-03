@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\ProgramLEE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E46E3ED2-6CC2-47CE-9C86-EDF4FD655CD0}|..\\Class17th(BalancedBinaryTree)\\Class17th(BalancedBinaryTree).vcxproj|C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\Class17th(BalancedBinaryTree)\\Source17.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{085779D4-C12B-4E62-88CD-CB07EE6411F2}|ProgramLEE.vcxproj|C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\ProgramLEE\\ProgramLEE.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{085779D4-C12B-4E62-88CD-CB07EE6411F2}|ProgramLEE.vcxproj|solutionrelative:ProgramLEE.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -20,20 +23,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProgramLEE.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\ProgramLEE\\ProgramLEE.cpp",
               "RelativeDocumentMoniker": "ProgramLEE.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\ProgramLEE\\ProgramLEE.cpp",
               "RelativeToolTip": "ProgramLEE.cpp",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAAAF8AAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-12T11:08:00.681Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source17.cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\Class17th(BalancedBinaryTree)\\Source17.cpp",
+              "RelativeDocumentMoniker": "..\\Class17th(BalancedBinaryTree)\\Source17.cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\Class17th(BalancedBinaryTree)\\Source17.cpp",
+              "RelativeToolTip": "..\\Class17th(BalancedBinaryTree)\\Source17.cpp",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAAALQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-03T12:44:01.546Z",
               "EditorCaption": ""
             },
             {
@@ -62,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Source16.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\\uC0C8 \uD3F4\uB354\\cpplangauage2\\Class16th(BinarySearchTree)\\Source16.cpp",
               "RelativeDocumentMoniker": "..\\Class16th(BinarySearchTree)\\Source16.cpp",
@@ -70,12 +86,11 @@
               "RelativeToolTip": "..\\Class16th(BinarySearchTree)\\Source16.cpp",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-02T11:22:23.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-02T11:22:23.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "utility",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\utility",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\utility",
